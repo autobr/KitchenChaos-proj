@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6153285708642459676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28936623e5f9c5442843d1c5625df691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenObjectSO: {fileID: 11400000, guid: 5eb5bbdb8ed37e447b7b040bae428e75, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: 9198d043e6504704b8e05ff0663c79b2, type: 2}
 --- !u!1001 &6740271502851064245
 PrefabInstance:
   m_ObjectHideFlags: 0

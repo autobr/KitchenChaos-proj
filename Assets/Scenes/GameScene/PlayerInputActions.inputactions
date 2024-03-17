@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "InteractAlternate",
+                    "type": "Button",
+                    "id": "0c65d00c-12dc-4dec-9176-060bdca3a27f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -148,12 +157,12 @@
                 },
                 {
                     "name": "",
-                    "id": "35dc40ba-99ba-4d87-988e-d381222d7149",
-                    "path": "<Keyboard>/space",
+                    "id": "90d11c0a-2631-424f-b41a-509de36be169",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "InteractAlternate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
