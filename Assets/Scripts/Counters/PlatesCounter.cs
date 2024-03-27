@@ -1,0 +1,60 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class PlatesCounter : BaseCounter
+{
+
+    public event EventHandler OnPlateSpawned;
+    public event EventHandler OnPlateRemoved;
+
+    [SerializeField] private KitchenObjectSO plateKitchenObjectSO;
+
+    private float spawnPlateTimer;
+    private float spawnPlateTimerMax = 4f;
+
+    private int platesSpawnedAmount;
+    private int platesSpawnedAmountMax = 4;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        spawnPlateTimer += Time.deltaTime;
+
+        if (spawnPlateTimer > spawnPlateTimerMax)
+        {
+            spawnPlateTimer = 0f;
+
+            if (platesSpawnedAmount < spawnPlateTimerMax) 
+            {
+                platesSpawnedAmount++;
+
+                OnPlateSpawned?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+
+    public override void Interact(Player player)
+    {
+        if (!player.HasKitchenObject())
+        {
+            // player no hold
+            if (platesSpawnedAmount > 0)
+            {
+                platesSpawnedAmount--;
+
+                KitchenObject.SpawnKitchenObject(plateKitchenObjectSO, player);
+
+                OnPlateRemoved?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+}
