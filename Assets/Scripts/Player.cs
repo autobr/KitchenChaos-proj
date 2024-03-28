@@ -10,6 +10,9 @@ public class Player : MonoBehaviour, IKitchenObjectParent
 
     public static Player Instance { get; set; }
 
+
+    public event EventHandler OnPickedSomething;
+
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
@@ -164,7 +167,15 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     }
 
     public Transform GetKitchenObjectFollowTransform() { return kitchenObjectHoldPoint; }
-    public void SetKitchenObject(KitchenObject kitchenObject) { this.kitchenObject = kitchenObject; }
+    public void SetKitchenObject(KitchenObject kitchenObject) 
+    {
+        this.kitchenObject = kitchenObject; 
+
+        if (kitchenObject != null)
+        {
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
+    }
     public KitchenObject GetKitchenObject() { return kitchenObject; }
     public void ClearKitchenObject() { kitchenObject = null; }
     public bool HasKitchenObject() { return kitchenObject != null; }
