@@ -155,8 +155,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b69eb539-2573-4a3e-a096-a37c30e152b3",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "StickDeadzone(min=0.5)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "be70ca6e-454c-4a2e-bbfb-c1e854242333",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d9ce3c1-254c-4f71-87bf-a6edbab205ca",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,8 +199,30 @@
                 },
                 {
                     "name": "",
+                    "id": "bbe7bcc6-2344-45fb-bea3-6da58d172ad8",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractAlternate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0da77ee8-d592-40a7-a0c0-cb11ed03b4f1",
                     "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f94160a-08ce-4b8e-a9eb-5e128551b98b",
+                    "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

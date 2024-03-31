@@ -237,4 +237,10 @@ public class StoveCounter : BaseCounter, IHasProgress
         Debug.LogWarning("No recipe for object: " + inputKitchenObjectSO.name);
         return null;
     }
+
+    public bool IsFried()
+    {
+        return state == State.Fried;
+    }
+
 }
